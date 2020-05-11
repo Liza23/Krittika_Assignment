@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\title{Binary Star System\\\Large Derivations}
+\author{Liza Dahiya}
+\date{ }
+
+\begin{document}
+
+\maketitle
+
+\textbf{Consider a binary star system:}\\ \par
+Let $m_1$, $r_1$, $v_1$ be respectively the mass, radius of revolution around center of mass and orbital velocity of first binary star and $m_2$, $r_2$, $v_2$ be the mass, radius of revolution around center of mass and orbital velocity of second binary star, respectively. \par
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.1]{circle.jpg}
+    \caption{Binary star system}
+    \label{fig:mesh1}
+\end{figure}
+Using the center of mass formula for the two stars, we get,
+$$m_1r_1 = m_2r_2$$ 
+Since it is a binary star system, the time period of revolution, $T$ for both the stars will be equal. Now using \textbf{Kepler's Third Law}, which is stated as follows:
+$$T^2 = \frac{4 \pi^2 r^3}{G m}$$
+Here, for the binary stars we have, $r = r_1 + r_2$, and $m = m_1 + m_2$. Hence, for binary stars the above formula translates as: 
+$$T^2 = \frac{4 \pi^2 (r_1 + r_2)^3}{G (m_1 + m_2)}$$
+Put formula for $m_2$ above equation to calculate mass of star 1,
+$$T^2 = \frac{4 \pi^2 (r_1 + r_2)^3}{G (m_1 + \frac{m_1r_1}{r_2})}$$
+Take $m_1$ as common and simplify for radius terms,
+$$T^2 = \frac{4 \pi^2 r_2 (r_1 + r_2)^2}{G m_1}$$
+Now, take $m_1$ on LHS:
+$$m_1 = \frac{4 \pi^2 r_2 (r_1 + r_2)^2}{G T^2}$$
+Here's the formula for $m_1$ is expressed in terms of $r_1$ and $r_2$, lets rather express it in terms of orbital velocities, using:
+$$r_1=\frac{T v_1}{2 \pi} \hspace{1 cm} r_2=\frac{T v_2}{2 \pi}$$
+Hence putting these in original equation,
+$$m_1 = \frac{4 \pi^2 \frac{T v_2}{2 \pi} (\frac{T v_1}{2 \pi} + \frac{T v_2}{2 \pi})^2}{G T^2}$$
+Factoring out common terms, we get $m_1$ as:
+{\color{blue} $$m_1 = \frac{T v_2 (v_1 + v_2)^2}{2 \pi G}$$}
+And similarly, we get $m_2$ as:
+{\color{blue}$$m_2 = \frac{T v_1 (v_1 + v_2)^2}{2 \pi G}$$}
+Lets also calculate the velocity of center of mass using this formulas,
+$$v_{cm} = \frac{m_1v_1 + m_2v_2}{m_1 + m_2}$$
+Lets put the masses calculated in above formula,
+$$v_{cm} = \frac{\frac{T v_2 (v_1 + v_2)^2}{2 \pi G}v_1 + \frac{T v_1 (v_1 + v_2)^2}{2 \pi G}v_2}{\frac{T v_2 (v_1 + v_2)^2}{2 \pi G} + \frac{T v_1 (v_1 + v_2)^2}{2 \pi G}}$$
+Cancelling out common terms, we get:
+{\color{blue}$$v_{cm} = \frac{2 v_1v_2}{v_1 + v_2}$$}
+
+\end{document}
